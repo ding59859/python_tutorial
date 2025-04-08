@@ -1,0 +1,57 @@
+import math
+
+# 正方形類別
+class Square:
+    def __init__(self, side):
+        self.side = side
+
+    def area(self):
+        return self.side ** 2
+
+    def perimeter(self):
+        return 4 * self.side
+
+# 圓形類別
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return math.pi * self.radius ** 2
+
+    def perimeter(self):
+        return 2 * math.pi * self.radius
+
+# 正三角形類別
+class EquilateralTriangle:
+    def __init__(self, side):
+        self.side = side
+
+    def area(self):
+        return (math.sqrt(3) / 4) * self.side ** 2
+
+    def perimeter(self):
+        return 3 * self.side
+
+# ===== 測試區 =====
+square = Square(5)
+circle = Circle(3)
+triangle = EquilateralTriangle(4)
+
+print("【正方形】")
+print(f"邊長: {square.side}")
+print(f"面積: {square.area():.2f}")
+print(f"周長: {square.perimeter():.2f}")
+print()
+
+print("【圓形】")
+print(f"半徑: {circle.radius}")
+print(f"面積: {circle.area():.2f}")
+print(f"周長: {circle.perimeter():.2f}")
+print()
+
+print("【正三角形】")
+print(f"邊長: {triangle.side}")
+print(f"面積: {triangle.area():.2f}")
+print(f"周長: {triangle.perimeter():.2f}")
+
